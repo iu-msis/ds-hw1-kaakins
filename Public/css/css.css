@@ -7,7 +7,7 @@ a:hover {
   display: inline;
 }
 
-header, h2 {
+header {
   color: crimson;
 }
 
@@ -26,4 +26,24 @@ li a {
     color: white;
     padding: 14px;
     font-size:15px
+}
+table, th, td {
+    border: 1px solid black;
+}
+
+tfoot, thead {
+  color: white;
+  background-color:gray;
+}
+
+input, label {
+    display:inline-block;
+    padding:1px;
+    text-align:left
+}
+
+label {
+    width:150px;
+    margin: 3px;
+    border:none;
 }
