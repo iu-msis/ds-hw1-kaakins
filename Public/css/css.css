@@ -7,8 +7,16 @@ a:hover {
   display: inline;
 }
 
+h1 {
+  color: white;
+  background-color:gray;
+  border-bottom: black solid 2px;
+  padding:10
+}
+
 header {
-  color: crimson;
+  background-color:gray;
+  text-align:center
 }
 
 h1, h2, body {
@@ -20,15 +28,17 @@ ul {
     margin: 0;
     padding: 0;
     background-color: gray;
+    list-style:none
 }
 
 li a {
     color: white;
     padding: 14px;
-    font-size:15px
+    font-size:15px;
 }
+
 table, th, td {
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 tfoot, thead {
@@ -46,4 +56,23 @@ label {
     width:150px;
     margin: 3px;
     border:none;
+    text-align:left
+}
+
+#Gregory {
+  float:left;
+  border: 2px black solid;
+  margin: 10px
+}
+
+.information {
+  color: black;
+  text-align: left;
+  float:left;
+}
+
+.center {
+    margin: auto;
+    width: 80%;
+    padding-left: 80px;
 }
