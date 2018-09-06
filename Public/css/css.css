@@ -34,11 +34,11 @@ ul {
 
 navbar navbar-default {
     list-style-type: none;
-    color:white
+    color:white;
     background-color: gray;
 }
 
-li a {
+nav > li a {
     color: white;
     padding: 14px;
     font-size:15px;
@@ -75,10 +75,6 @@ label {
 .center {
     margin: auto;
     width: 80%;
-}
-
-a {
-  color:gray
 }
 
 #Gregory {
