@@ -35,42 +35,47 @@
     <div class="col">
       <h2>Accounts Receivable</h2>
 
-<table class="table-striped table-hover" align="center">
+<table id="AccountsReceivable" class="table-striped table-hover" align="center">
   <thead>
   <tr>
-    <td>Name</td>
-    <td>Date</td>
-    <td>Amount</td>
-    <td>Details</td>
+    <th>Last Name</th>
+    <th>First Name</th>
+    <th>Date</th>
+    <th>Amount</th>
+    <th>Details</th>
   </tr>
   </thead>
   <tr>
-    <td>Bipin Prabhakar</td>
+    <td>Prabhakar</td>
+    <td>Bipin</td>
     <td>November 10, 2017</td>
     <td>$15</td>
     <td>Dinner</td>
   </tr>
   <tr>
-    <td>Alan Dennis</td>
+    <td>Dennis</td>
+    <td>Alan</td>
     <td>September 1, 2017</td>
     <td>$40</td>
     <td>Beer</td>
   </tr>
   <tr>
-    <td>Michael Frutiger</td>
+    <td>Frutiger</td>
+    <td>Michael</td>
     <td>May 23, 2018</td>
     <td>$15</td>
     <td>T-Shirt</td>
   </tr>
   <tr>
-    <td>Jay Newquist</td>
+    <td>Newquist</td>
+    <td>Jay</td>
     <td>August 21, 2018</td>
     <td>$50</td>
     <td>Tutoring</td>
   </tr>
   <tfoot>
   <tr>
-    <td colspan="4" align="center">Total Owed: $120</td>
+    <td colspan="5" align="center">Total Owed: $120</td>
   </tr>
   </tfoot>
 </table>
@@ -86,7 +91,7 @@
 <label>Date: </label>
 <input type="date" name="date"><br />
 <label>Amount: </label>
-<input type="number" name="amount"><br />
+<input type="number" name="amount" class="amount"><br />
 <label>Details:</label>
 <input type="text" name="details"><br /><br />
 <input type="submit" name="submit" />
@@ -99,5 +104,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="js/TableSorter.js"></script>
+    <script>new Tablesort(document.getElementById('AccountsReceivable'));</script>
+    <script src="js/TableSorter.js"></script>
   </body>
 </html>
