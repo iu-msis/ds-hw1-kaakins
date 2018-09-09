@@ -25,9 +25,7 @@
         <div class="row">
           <div class="col">
             <span class="label">Date:</span>
-            <span class="data">{{target_date}}</span>
-
-
+            <span class="data">{{ target_date }}</span>
           </div>
         </div>
         <div>
@@ -42,8 +40,10 @@
 
     <div class="row">
       <div class="col placeholder" style="height:200px">
-        Budget Chart goes here.
-        {{budget}}
+        Budget Chart goes here.<br />
+        Budget: {{ budget }}<br />
+        Projected Spend: {{ projected_spend }}
+
       </div>
       <div class="col placeholder">
         Burndown Chart goes here.
@@ -61,58 +61,30 @@
           <th>Task</th>
           <th>Type</th>
           <th>Size</th>
-          <th>Assigned Team</th>
+          <th>Team Name</th>
           <th>Status</th>
           <th>Started</th>
+          <th>Close Date</th>
           <th>Hours</th>
           <th>% Complete</th>
+          <th>Current Sprint</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr v-for="task in tasks">
             <td></td>
-            <td>{{short_description}}</td>
-            <td>Epic</td>
-            <td>S</td>
-            <td>Flying Tomatoes</td>
-            <td>Started</td>
-            <td>{{start_date}}</td>
-            <td>46</td>
-            <td>98%</td>
+            <td>{{ task.title }}</td>
+            <td>{{ task.type }}</td>
+            <td>{{ task.size }}</td>
+            <td>{{ task.team }}</td>
+            <td>{{ task.status }}</td>
+            <td>{{ task.start_date }}</td>
+            <td>{{ task.end_date}}</td>
+            <td>{{ task.hours_worked }}</td>
+            <td>{{ task.perc_complete }}</td>
+            <td>{{ task.current_sprint}}</td>
           </tr>
-          <tr>
-            <td></td>
-            <td>Create a dashboard</td>
-            <td>Story</td>
-            <td>M</td>
-            <td>Noble Carrots</td>
-            <td>Started</td>
-            <td>2018-08-02</td>
-            <td>90</td>
-            <td>95%</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>Update Unit Tests</td>
-            <td>Story</td>
-            <td>M</td>
-            <td>MS Why S</td>
-            <td>Closed</td>
-            <td>2018-07-15</td>
-            <td>40</td>
-            <td>100%</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>Write Middleware</td>
-            <td>Epic</td>
-            <td>XL</td>
-            <td>California Dream</td>
-            <td>Open</td>
-            <td></td>
-            <td></td>
-            <td>0%</td>
-          </tr>
+
 
         </tbody>
       </table>
@@ -120,10 +92,14 @@
 
   </div>
 
+  <div class="row">
+    <button v-on:click="alert('foo')">Click me!</button>
+  </div>
+
   <!-- plug-in from https://github.com/tristen/tablesort/blob/gh-pages/tablesort.css -->
   <script src="js/tablesort.min.js"></script>
     <script>new Tablesort(document.getElementById('taskTable'));</script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/dashboard.app.js"></script>
   </body>
 </html>
