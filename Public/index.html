@@ -71,7 +71,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="task in tasks">
+          <tr v-for="task in tasks"
+            :key="task.id"
+            :id="task.id"
+            :class="task.current_sprint ? 'current-sprint' : ' ' ">
             <td></td>
             <td>{{ task.title }}</td>
             <td>{{ task.type }}</td>
@@ -81,7 +84,7 @@
             <td>{{ task.start_date }}</td>
             <td>{{ task.end_date}}</td>
             <td>{{ task.hours_worked }}</td>
-            <td>{{ task.perc_complete }}</td>
+            <td :class="completeClass(task)">{{ task.perc_complete }}</td>
             <td>{{ task.current_sprint}}</td>
           </tr>
 

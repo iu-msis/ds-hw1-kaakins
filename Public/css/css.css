@@ -55,3 +55,11 @@ th[role=columnheader]:not(.no-sort):hover:after {
 	visibility: visible;
 	opacity: 1;
 }
+
+#taskTable > tbody > tr.current-sprint {
+  border-left: 12px solid rgb(35, 95, 163);
+}
+
+#taskTable > tbody > tr {
+  border-left: 12px solid #ccc;
+}

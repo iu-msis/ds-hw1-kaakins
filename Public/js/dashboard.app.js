@@ -71,12 +71,13 @@ computed: {
   }
 },
 methods: {
-  pretty_date: function(d) {
-    //do magic
-    return d;
-  },
-  log (msg) {
-    alert(msg);
+  completeClass: function(task) {
+    if(task.perc_complete == 100) {
+      return 'alert-success';
+    }
+    if(task.current_sprint && task.hours_worked == 0) {
+      return 'alert-warning';
+    }
   }
 }
 });
