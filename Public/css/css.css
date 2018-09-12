@@ -2,24 +2,25 @@
   background-color: rgb(200,200,255);
   border: 2px solid rgb(50,50,100);
 }
-section, section.placeholder {
-  background-color: white;
-  border: 3px solid rgb(40,100,40,100)
+section {
+  border: 1px solid rgb(35,95,163);
+  text-align:center;
 }
 section h2 {
-  font-size: 12pt;
-  color: #999;
-  text-align: left;
-  text-transform: uppercase;
-}
-.data {
-  font-size: 22pt;
-  color: #000080;
-}
-.label {
   font-size: 10pt;
-  color: #ccc;
-  text-transform: capitalize;
+  color: #999;
+  text-transform: uppercase;
+  margin-top: 1em;
+  margin-bottom: 0;
+  padding-bottom:0;
+}
+
+section .ban {
+  font-size:20px;
+  color: rgb(35, 95, 163);
+  font-weight:bold
+  margin-top: 0;
+  padding-top: 0
 }
 
 th[role=columnheader]:not(.no-sort) {
