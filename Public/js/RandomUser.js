@@ -3,12 +3,11 @@ var fetchRandomUser = new Vue({
   data: {
     person:{
       name: {
-        title:"",
         first: "",
         last: ""},
       location:{
-        timezone:{
-          description:""}},
+        city:"",
+        state:""},
       email: ""},
       dob:{
         date:""
@@ -16,7 +15,18 @@ var fetchRandomUser = new Vue({
       picture:""
   },
 
+  computed: {
+//from moment
+    dateDiff: function (){
+      return moment().diff(moment(this.person.dob.date),"years")
+    }
+},
+
   methods: {
+    //from Gregory
+    pretty_date: function (d) {
+      return moment(d).format('l')
+    },
     fetchRandomUser () {
       fetch('https://randomuser.me/api')
       .then( response => response.json() )

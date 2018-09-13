@@ -29,17 +29,19 @@
 <h2>{{person.name.first}} {{person.name.last}}</h2>
 <div class="center">
 
-<img v-bind:src="person.picture.large" id="image"><br />
-Image Source: https://randomuser.me/api/
+<img v-bind:src="person.picture.large" id="image"><br /><br />
+<a href="https://randomuser.me/">Image Source</a>
+
 <div class="information"><br />
 <ul style="list-style-type:disc">
   <li><a v-bind:href="'mailto:' + person.email">{{ person.email }}</a></li>
-  <li>{{ someDate | moment("dddd, MMMM Do YYYY, h:mm:ss a") }}
-    Date of birth: {{person.dob.date}}</li>
-  <li>Age:</li>
-  <li>Location: {{person.location.timezone.description}}</li>
-  <li><a href="#">Edit Profile</a><br /></li>
+  <li>Birthday: {{pretty_date(person.dob.date)}}</li>
+  <li>Age: {{dateDiff}}</li>
+  <li>Location: {{person.location.city}}, {{person.location.state}}</li>
 </ul>
+
+<button type="button" @click="fetchRandomUser">Get New User</button>
+
 </div>
 </div>
 </div>

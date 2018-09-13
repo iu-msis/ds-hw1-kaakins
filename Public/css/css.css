@@ -27,7 +27,7 @@ h1, h2, body {
   text-align: center;
 }
 
-h2{
+h2, .information {
   text-transform: capitalize;
 }
 
