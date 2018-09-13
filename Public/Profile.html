@@ -1,10 +1,13 @@
+<!doctype html>
+<html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="CSS/css.css">
 
-<title>Profile</title>
+<head>
+  <title>Profile</title>
 </head>
 <header>
 <h1>Bank of Gregory</h1>
@@ -22,29 +25,28 @@
 </header>
 
 <body>
-
-<h2>Dr. Tom Gregory</h2>
+<div id="randomUser">
+<h2>{{person.name.first}} {{person.name.last}}</h2>
 <div class="center">
 
-  <a target="_blank" href="images/Gregory.jpg">
-        <img src="images/Gregory.jpg" alt="Dr. Tom Gregory" height="250" id="Gregory">
-        </a>
-        <br />Image Source: https://kelley.iu.edu/faculty-research/faculty-directory/profile.cshtml?id=TOMGREG
+<img v-bind:src="person.picture.large" id="image"><br />
+Image Source: https://randomuser.me/api/
 <div class="information"><br />
 <ul style="list-style-type:disc">
-  <li id="email">Email: <a href="mailto:tomgreg@iu.edu">tomgreg@iu.edu</a>
-  </li>
-  <li>Profession: Clinical Professor</li>
-  <li>Areas of Expertise: Management of Software Development, Agile Development Methodologies, Data Management, Distributed Collaboration, The Internet</li>
-  <li>Birthdate: 10/23/90<br /></li>
-  <li>Birth Place: Bloomington, IN<br /></li>
-  <li>Age: 27<br /></li>
-  <a href="#">Edit Profile</href><br />
+  <li><a v-bind:href="'mailto:' + person.email">{{ person.email }}</a></li>
+  <li>{{ someDate | moment("dddd, MMMM Do YYYY, h:mm:ss a") }}
+    Date of birth: {{person.dob.date}}</li>
+  <li>Age:</li>
+  <li>Location: {{person.location.timezone.description}}</li>
+  <li><a href="#">Edit Profile</a><br /></li>
+</ul>
 </div>
 </div>
+</div>
 
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/RandomUser.js"></script>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
