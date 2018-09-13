@@ -34,7 +34,7 @@
 
 <div class="information"><br />
 <ul style="list-style-type:disc">
-  <li><a v-bind:href="'mailto:' + person.email">{{ person.email }}</a></li>
+  <li><a class="email" v-bind:href="'mailto:' + person.email">{{ person.email }}</a></li>
   <li>Birthday: {{pretty_date(person.dob.date)}}</li>
   <li>Age: {{dateDiff}}</li>
   <li>Location: {{person.location.city}}, {{person.location.state}}</li>

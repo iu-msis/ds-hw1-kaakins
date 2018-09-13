@@ -132,3 +132,7 @@ th[role=columnheader]:not(.no-sort):hover:after {
 #image {
   height:200px
 }
+
+.email {
+  text-transform: lowercase;
+}
