@@ -8,12 +8,14 @@ var fetchRandomUser = new Vue({
       location:{
         city:"",
         state:""},
-      email: ""},
+      email: "",
       dob:{
         date:""
       },
-      picture:""
-  },
+      picture:{
+        large:""
+      }
+  }},
 
   computed: {
 //from moment
