@@ -10,5 +10,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'
 }
 
 require 'environment.php';
-
+require 'models/Comment.php'
 /** MODELS **/
