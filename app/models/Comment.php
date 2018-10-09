@@ -9,16 +9,14 @@ class Comment
     $this->id = isset($row['id']) ? intval($row['id']) : null;
 
     $this->comment = $row['comment'];
-    echo $this->comment;
+    //echo $this->comment;
     }
 
   public function create() {
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
-    $sql = 'INSERT INTO Comments (comment)
-            VALUES (?)';
+    $sql = 'INSERT INTO Comments (comment) VALUES (?)';
     $statement = $db->prepare($sql);
     $success = $statement->execute([
-
         $this->comment
     ]);
 
