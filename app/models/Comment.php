@@ -40,7 +40,7 @@ class Comment
     $success = $statement->execute();
 
     // 4. Handle the results
-    $arr = [];
+    $arr = ();
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
       $theComment =  new Comment($row);
       array_push($arr, $theComment);
