@@ -7,8 +7,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   exit;
 }
 
-
-
 $commentArr = Comment::fetchAll();
 
 // 2. Convert to JSON
