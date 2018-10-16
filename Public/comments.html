@@ -51,17 +51,12 @@
   </table>
   </div>
   <div class="col">
-  <h2>Add Transaction</h2>
-  <form action="#" method="post">
-  <label>Name: </label>
-  <input type="text" name="name"><br />
-  <label>Date: </label>
-  <input type="date" name="date"><br />
-  <label>Amount: </label>
-  <input type="number" name="amount" class="amount"><br />
-  <label>Details:</label>
-  <input type="text" name="details"><br /><br />
-  <input type="submit" name="submit" />
+  <h2>Add Comment</h2>
+  <form @submit.prevent="postComments()">
+  <label>Comment: </label>
+  <input id="comment" type="text" name="comment">
+  <br /><br />
+  <button id="submitNewComment">Submit</button>
   </form>
   </div>
 
