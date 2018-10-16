@@ -35,6 +35,7 @@ var commentApp = new Vue({
       .then( response => response.json())
       .then(function(resp) {
         console.log(resp)
+        console.log(document.getElementById('comment').value)
       })
       .catch( err => {
         console.log('TASK FETCH ERROR:');
