@@ -35,7 +35,7 @@
       <h2>Comments</h2>
 
 <div id="commentsData">
-  <table id="commentsTable" class="table-striped table-hover" align="center">
+  <table id="commentTable" class="table-striped table-hover" align="center">
     <thead>
     <tr>
       <th>ID</th>
@@ -43,16 +43,17 @@
     </tr>
     </thead>
 
-    <tbody v-if="comments">
+    <tbody v-if="comments" id="commentTableBody">
       <tr v-for="comment in comments">
         <td>{{comment.id}}</td>
         <td>{{comment.comment}}</td>
       </tr>
     </tbody>
   </table>
+
   <div class="col">
   <h2>Add Comment</h2>
-  <form @submit.prevent="postComments">
+  <form @submit.prevent="postComments" id="newCommentForm">
   <label>Comment: </label>
   <input id="comment" type="text" name="comment">
   <br/><br/>
@@ -75,7 +76,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="js/commentApp.js"></script>
     <script src="js/TableSorter.js"></script>
-    <script>new Tablesort(document.getElementById('commentsTable'));</script>
+    <script>new Tablesort(document.getElementById('commentTable'));</script>
     <script src="js/TableSorter.js"></script>
   </body>
 </html>
